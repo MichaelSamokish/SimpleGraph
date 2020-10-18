@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGraph", "SimpleGraph.csproj", "{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGraph.Tests", "SimpleGraph.Tests\SimpleGraph.Tests.csproj", "{422C5674-70C0-49C5-B04B-716307231F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGraph", "SimpleGraph\SimpleGraph.csproj", "{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Release|Any CPU.Build.0 = Release|Any CPU
 		{422C5674-70C0-49C5-B04B-716307231F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{422C5674-70C0-49C5-B04B-716307231F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{422C5674-70C0-49C5-B04B-716307231F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{422C5674-70C0-49C5-B04B-716307231F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
