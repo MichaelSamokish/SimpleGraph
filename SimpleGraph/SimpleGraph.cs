@@ -18,13 +18,16 @@ namespace SimpleGraph
 
         public void AddEdge(ISimpleGraphEdge<T> edge)
         {
-            Edges.Add(edge);
+            if (!Edges.Contains(edge))
+                Edges.Add(edge);
+            
             TopologicalSort();
         }
 
         public void AddNode(ISimpleGraphNode<T> node)
         {
-            Nodes.Add(node);
+            if(!Nodes.Contains(node))
+                Nodes.Add(node);
             TopologicalSort();
         }
 
