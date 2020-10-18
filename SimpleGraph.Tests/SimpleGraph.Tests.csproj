@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>SimpleGraph</RootNamespace>
-    <AssemblyName>SimpleGraph</AssemblyName>
+    <ProjectGuid>{422C5674-70C0-49C5-B04B-716307231F16}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimpleGraph.Tests</RootNamespace>
+    <AssemblyName>SimpleGraph.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,31 +17,27 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Interfaces\ISimpleGraph.cs" />
-    <Compile Include="Interfaces\ISimpleGraphEdge.cs" />
-    <Compile Include="Interfaces\ISimpleGraphNode.cs" />
-    <Compile Include="Interfaces\ISimpleGraphTerminal.cs" />
-    <Compile Include="SimpleGraph.cs" />
-    <Compile Include="SimpleGraphNode.cs" />
-    <Compile Include="SimpleGraphTerminal.cs" />
-    <Compile Include="SimpleGraphEdge.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\SimpleGraph.csproj">
+      <Project>{2D9CFEB9-AEE2-4BE9-8CD2-2FF7A6945875}</Project>
+      <Name>SimpleGraph</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
