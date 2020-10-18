@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
 
 namespace SimpleGraph
 {
@@ -84,18 +83,6 @@ namespace SimpleGraph
             }
 
             return true;
-        }
-
-        public string Serialize()
-        {
-            var settings = new JsonSerializerSettings
-            {
-                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-                Formatting = Formatting.Indented,
-                TypeNameHandling = TypeNameHandling.All,
-                PreserveReferencesHandling = PreserveReferencesHandling.All
-            };
-            return JsonConvert.SerializeObject(this,settings);
         }
 
         private void DepthFirstSearch(ISimpleGraphNode<T> node, Dictionary<ISimpleGraphNode<T>, bool> visited, Stack<ISimpleGraphNode<T>> stack)
