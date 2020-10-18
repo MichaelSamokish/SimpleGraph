@@ -11,18 +11,18 @@ namespace SimpleGraph
             Outputs = new List<ISimpleGraphTerminal<T>>();
         }
 
-        public SimpleGraphNode(int index): this()
+        public SimpleGraphNode(int index) : this()
         {
             Index = index;
         }
 
-        public int Index { get; set; }
+        public int Index;
 
         public List<ISimpleGraphTerminal<T>> Inputs { get; set; }
         public List<ISimpleGraphTerminal<T>> Outputs { get; set; }
         public T Value { get; set; }
 
-        public void Calculate()
+        public virtual void Calculate()
         {
         }
 

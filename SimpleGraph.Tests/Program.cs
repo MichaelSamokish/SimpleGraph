@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using SimpleGraph;
 
 namespace SimpleGraph.Tests
@@ -54,7 +55,14 @@ namespace SimpleGraph.Tests
             graph.AddEdge(new SimpleGraphEdge<bool>(Node4Output, Node1Input1));
             graph.AddEdge(new SimpleGraphEdge<bool>(Node5Output, Node1Input2));
 
-            graph.Calculate();
+            //graph.Calculate();
+
+            var xml = graph.Serialize();
+            var settings = new JsonSerializerSettings();
+            settings.TypeNameHandling = TypeNameHandling.All;
+            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
+            var graph2 = JsonConvert.DeserializeObject<SimpleGraph<bool>>(xml, settings);
+            graph2.Calculate();
             Console.ReadKey();
         }
     }

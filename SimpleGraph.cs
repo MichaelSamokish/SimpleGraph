@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace SimpleGraph
 {
@@ -66,6 +70,15 @@ namespace SimpleGraph
             }
         }
 
+        public string Serialize()
+        {
+            var settings = new JsonSerializerSettings();
+            settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            settings.Formatting = Formatting.Indented;
+            settings.TypeNameHandling = TypeNameHandling.All;
+            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
+            return JsonConvert.SerializeObject(this,settings);
+        }
 
         private void DepthFirstSearch(ISimpleGraphNode<T> node, Dictionary<ISimpleGraphNode<T>, bool> visited, Stack<ISimpleGraphNode<T>> stack)
         {
@@ -79,7 +92,6 @@ namespace SimpleGraph
                 if(!visited[nextNode])
                 {
                     DepthFirstSearch(nextNode, visited, stack);
-
                 }
             }
 
