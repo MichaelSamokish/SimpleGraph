@@ -79,6 +79,7 @@ namespace SimpleGraph
                 if(!visited[nextNode])
                 {
                     DepthFirstSearch(nextNode, visited, stack);
+
                 }
             }
 
