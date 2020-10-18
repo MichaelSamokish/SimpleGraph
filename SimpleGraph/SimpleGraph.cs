@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+
 namespace SimpleGraph
 {
     public class SimpleGraph<T> : ISimpleGraph<T>
